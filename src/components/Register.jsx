@@ -3,6 +3,8 @@ import useAuth from "../hooks/useAuth";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//Problem with cors on heroku, its not http/https error. Need to check validity of the repo through heroku to see if its actually being hosted
+
 const Register = () => {
   const { setToken } = useAuth();
   const navigate = useNavigate();

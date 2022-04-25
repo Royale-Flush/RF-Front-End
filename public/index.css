@@ -1,7 +1,8 @@
 * {
-  background-color: rgb(158, 152, 160);
 }
+
 body {
+  background-color: rgb(158, 152, 160);
   display: flex;
   justify-content: center;
   align-items: center;
