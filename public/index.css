@@ -1,0 +1,13 @@
+* {
+  background-color: rgb(158, 152, 160);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  font-size: 14pt;
+  margin-left: 1rem;
+}
