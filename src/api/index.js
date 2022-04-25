@@ -18,7 +18,7 @@ export const getMe = async (token) => {
 
 export const registerUser = async (username, password) => {
   try {
-    const response = await fetch(`${baseURL}/auth/register`, {
+    const response = await fetch(`${URL}/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
