@@ -15,3 +15,22 @@ export const getMe = async (token) => {
     return error;
   }
 };
+
+export const registerUser = async (username, password) => {
+  try {
+    const response = await fetch(`${baseURL}/auth/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    });
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
