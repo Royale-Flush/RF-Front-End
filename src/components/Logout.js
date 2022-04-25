@@ -10,11 +10,14 @@
 
 // export default Logout;
 
-import React from "react";
-import { useAuth } from "../hooks/useAuth";
+import React, { useState } from "react";
+import useAuth from "../hooks/useAuth";
 
-const Logout = ({ setIsLoggedIn, isLoggedIn }) => {
-  const { token, setToken } = useAuth;
+const Logout = () => {
+  const { token, setToken } = useAuth();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   const logoutUser = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
