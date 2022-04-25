@@ -1,11 +1,11 @@
-import React, { memo } from "react";
+import React from "react";
 
-const Register = memo(() => {
+const Register = () => {
   return (
     <div>
-      <h1>yo</h1>
+      <h1>sup</h1>
     </div>
   );
-});
+};
 
 export default Register;

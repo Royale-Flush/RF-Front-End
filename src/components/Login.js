@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useAuth from "../hooks/useAuth";
-import { fetchUserToken } from "../api/users";
+import { getMe } from "../api/index";
 
 const Login = () => {
   const { setToken, isLoggedIn, setIsLoggedIn } = useAuth();
@@ -14,7 +14,7 @@ const Login = () => {
           onSubmit={async (e) => {
             e.preventDefault();
             try {
-              const response = await fetchUserToken(username, password);
+              const response = await getMe(username, password);
               localStorage.setItem("token", response.token);
               setToken(response.token);
               setIsLoggedIn(true);
