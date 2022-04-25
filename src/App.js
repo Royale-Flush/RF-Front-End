@@ -13,22 +13,22 @@ function App() {
         {token ? (
           <>
             <Link to="/Logout">Logout</Link>
-            <Link to="/cart">Cart</Link>
+            <Link to="/Cart">Cart</Link>
           </>
         ) : (
           <>
             <Link to="/Login">Login</Link>
-            <Link to="/signup">Sign Up</Link>
+            <Link to="/Signup">Sign Up</Link>
           </>
         )}
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/checkout" element={<Cart />} />
-        <Route path="/inventory" element={<Inventory />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/signup" element={<Register />} />
+        <Route path="/Checkout" element={<Cart />} />
+        <Route path="/Inventory" element={<Inventory />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Logout" element={<Logout />} />
+        <Route path="/Signup" element={<Register />} />
       </Routes>
     </div>
   );

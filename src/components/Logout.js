@@ -14,7 +14,7 @@ import React, { useState } from "react";
 import useAuth from "../hooks/useAuth";
 
 const Logout = () => {
-  const { token, setToken } = useAuth();
+  const { setToken } = useAuth();
 
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
