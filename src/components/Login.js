@@ -49,7 +49,7 @@ const Login = () => {
           display: isLoggedIn ? "block" : "none",
         }}
       >
-        <h3>LOGIN SUCCESS!</h3>
+        <h3>WELCOME BACK {`${username}`}!</h3>
       </div>
     </div>
   );
