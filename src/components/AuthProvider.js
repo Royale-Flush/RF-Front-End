@@ -3,31 +3,18 @@ import { useState, useEffect } from "react";
 import { getMe } from "../api";
 
 const AuthProvider = ({ children }) => {
-  const [token, setToken] = useState("");
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    const localStorageToken = localStorage.getItem("token");
-    if (localStorageToken) {
-      setToken(localStorageToken);
-    }
-  }, [token]);
-
-  useEffect(() => {
     const getMyUserFunction = async () => {
-      if (token) {
-        const result = await getMe(token);
-        setUser({
-          id: result.id,
-          username: result.username,
-        });
-      }
+      const result = await getMe();
+      setUser(result);
     };
     getMyUserFunction();
-  }, [token]);
+  }, [setUser]);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, token, setToken }}>
+    <AuthContext.Provider value={{ user, setUser }}>
       {children}
     </AuthContext.Provider>
   );

@@ -12,6 +12,8 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  // let token = "pizza";
+
   return (
     <div>
       <form
@@ -20,7 +22,7 @@ const Register = () => {
           const result = await registerUser(username, password);
           console.log(result.token);
           if (result.error) {
-            console.log("error", result);
+            console.log("error", result.token);
             setError(result.error);
           } else {
             localStorage.setItem("token", result.token);
