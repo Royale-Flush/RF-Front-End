@@ -14,14 +14,10 @@ import React, { useState } from "react";
 import useAuth from "../hooks/useAuth";
 
 const Logout = () => {
-  const { setToken } = useAuth();
-
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const logoutUser = () => {
-    localStorage.removeItem("token");
     setIsLoggedIn(false);
-    setToken(localStorage.removeitem("token"));
   };
 
   return (

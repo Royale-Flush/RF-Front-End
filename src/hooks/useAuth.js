@@ -8,8 +8,6 @@ const useAuth = () => {
   return {
     user,
     setUser,
-    token,
-    setToken,
     isLoggedIn,
     setIsLoggedIn,
   };
